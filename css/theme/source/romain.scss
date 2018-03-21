@@ -1,0 +1,98 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Peralta');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: rgb(75, 55, 55);
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingMargin: 0 0 1em 0;
+$headingFont: 'Handlee', cursive;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .display {
+	font-family: $headingFont;
+}
+.reveal h1 {
+	font-family: $mainFont;
+	text-transform: uppercase;
+	margin-bottom: 1.5em;
+}
+.reveal h1 .display {
+	margin-top: 0.6em;
+	text-transform: none;
+	font-style: italic;
+}
+
+
+.slide-twitter body {
+    background-color: #1da1f2
+}
+.slide-twitter blockquote {
+	color: #555;
+	background-color: white;
+	border-radius: 30px;
+}
+
+.reveal .readable {
+	padding: 0.3em;
+	background-color: rgba($color: #333, $alpha: .8);
+}
+
+.reveal mark {
+	background-color: inherit;
+	border: 2px solid yellow;
+	padding: 0.1em 0.3em;
+}
+
+.offscreen {
+	display: block;
+	left: -50000px;
+	position: absolute;
+  }

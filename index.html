@@ -6,11 +6,11 @@
 
 		<title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/romain.css">
+
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +24,419 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+<section>
+	<h1>Is your EPUB accessible?
+		<div class="display">Put it to the test!</div>
+	</h1>
+	<div>Romain Deltour (<a href="https://twitter.com/rdeltour">@rdeltour</a>), DAISY Consortium</div>
+	<div><a href="http://techforum.booknetcanada.ca/sessions/is-your-epub-accessible-put-it-to-the-test/">#ebookcraft</a> – March 21, 2018</div>
+	<aside class="notes">
+		Hi
+	</aside>
+</section>
+
+<section>
+	<h2>#a11y <span class="fragment fade-in">testing</span></h2>
+</section>
+
+<section data-state="slide-twitter">
+	<h2>Because it’s right</h2>
+	<blockquote class="quote-tweet"><p>I would also say that not paying close attention to #a11y ignores the democratic promise of digital publishing. #eprdctn</p>&mdash; Laura Brady (@LauraB7) <a href="https://twitter.com/LauraB7/status/725348670196047873">April 27, 2016</a></blockquote>
+</section>
+
+<section data-background-video="assets/police.mp4">
+	<h2 class="readable" style="margin-top:4em">Because you don’t have a choice</h2>
+</section>
+
+<section>
+	<h2>Because… <br>it’s your (frickin’ damn) job!</h2>
+</section>
+
+<section data-state="slide-twitter">
+	<!-- <h2>Because it’s right</h2> -->
+	<blockquote class="quote-tweet"><p>When UX doesn't consider ALL users, shouldn't it be known as "SOME User Experience" or... SUX? #a11y</p>&mdash; Billy Gregory (@thebillygregory)<a href="https://twitter.com/thebillygregory/status/552466012713783297">Jan 6, 2015</a></blockquote>
+</section>
+
+<section>
+	<h2 style="margin-bottom: 0">Accessibility impacts everyone</h2>
+	<img src="assets/ms-inclusive-toolkit.png" alt="line icons representing various persons with permanent, temporary or situational disability" style="max-width: 80%">
+	<small>Credits: <a href="https://www.microsoft.com/en-us/design/inclusive">Microsoft’s Inclusive Design Manual</a></small>
+</section>
+
+<section>
+	<h2>Accessibility is a continuum</h2>
+</section>
+
+<section data-background-image="assets/mind-blown.gif" >
+	<h2 ><span class="readable">Accessibility is a multiverse!</span></h2>
+	<!-- TODO magic firework gif -->
+</section>
+
+<section data-background-image="assets/inaccessible-ramp.jpg" >
+	<h2><span class="readable">Accessibility is about the whole thing</span></h2>
+	<!--  -->
+	<!-- <img src="assets/inaccessible-ramp.jpg" alt="" style="height: 60%"> -->
+</section>
+
+<section data-background-image="assets/robson-square.jpg">
+	<h2><span class="readable">And the devil is in the details…</span></h2>
+	<div style="margin-top: 5em">
+		<small class="readable">See <a href="https://incl.ca/the-problems-with-ramps-blended-into-stairs/">“The Problems With Ramps Blended Into Stairs”</a> by Nicolas Steenhout</small>
+		<small class="readable">Photo credit: Robson Square, by <a href="https://www.flickr.com/photos/deanbouchard/6160057185/in/photostream/">Dean Bouchard</a></small>
+	</div>
+	<!-- complexity, subtle, difficult to test everything -->
+</section>
+
+<section>
+	<h2>… but it’s well worth a shot!</h2>
+	<aside class="notes">
+		<b>TIMING TIP: 10 min</b>
+	</aside>
+</section>
+
+<section>
+	<h2>What’s a book?</h2>
+	<p class="fragment fade-up">(drink! 🍻)</p>
+</section>
+
+<section>
+	EPUB
+	<span class="fragment fade-in">▶ HTML</span>
+	<span class="fragment fade-in">▶ DOM</span>
+	<span class="fragment fade-in">▶ a11y tree</span>
+	<span class="fragment fade-in">▶ a11y API</span>
+	<span class="fragment fade-in">▶ AT</span>
+</section>
+
+<section>
+	<!-- <h2>The accessibility tree</h2> -->
+	<img src="assets/DOM-a11y-tree.png" width="80%" alt="">
+	<small>Credits: <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model explainer</a></small>
+</section>
+
+<section>
+	<img src="assets/a11y-tree-example.png" width="80%" alt="">
+	<small>Credits: <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model explainer</a></small>
+</section>
+	
+<section>
+	<h2>Assistive technologies</h2>
+	<ul class="fragment">
+		<li>JAWS</li>
+		<li>NVDA</li>
+		<li>Voice Over</li>
+		<li>ZoomText</li>
+	</ul>
+	<!-- TODO check out other AT examples -->
+</section>
+
+<section>
+	<h2>Accessibility support</h2>
+	<!-- TODO insert definition from WCAG -->
+</section>
+
+<section>
+	<h2>Figuring out accessibility support</h2>
+	<ul>
+		<li class="fragment">blog, articles, tweets</li>
+		<li class="fragment">Web Platform Tests</li>
+		<li class="fragment">… but no “Can I Use” 😞</li>
+		<li class="fragment">often requires manual testing!</li>
+	</ul>
+</section>
+	
+<section>
+	<figure>
+		<img src="assets/html5accessibility.png" style="max-height: 70vh" alt=""/>
+		<figcaption><a href="http://html5accessibility.com/">http://html5accessibility.com/</a></figcaption>
+	</figure>
+</section>
+
+<section>
+	<figure>
+		<img src="assets/wpt-core-aam.png" style="max-height: 70vh" alt=""/>
+		<figcaption><a href="http://w3c.github.io/test-results/">http://w3c.github.io/test-results/</a></figcaption>
+	</figure>
+	
+</section>
+
+<section>
+	<h3>Accessibility inspectors (1)</h3>
+	<p>Browser-Based Dev Tools</p>
+	<ul>
+		<li>chrome://accessibility/ (Chrome)</li>
+		<li>F12 Accessibility Tree (Edge)</li>
+		<li>Dom Inspector (Firefox extension)</li>
+		<li>Accessibility Node Inspection in WebKit Web Inspector (Safari)</li>
+	</ul>
+</section>
+	
+<section>
+	<h3>Accessibility inspectors (2)</h3>
+	<p>Desktop apps</p>
+	<ul>
+		<li>Aviewer (Windows)</li>
+		<li>Inspect (Windows SDK)</li>
+		<li>Accprobe (Windows)</li>
+		<li>Accessibility Inspector (Xcode, OS X)</li>
+	</ul>
+</section>
+
+<section data-transition="slide-in fade-out">
+	<!-- <h2>Example</h2> -->
+	<pre><code data-trim data-noescape>
+		&lt;section>
+		&lt;h2>Chapter 1: Loomings&lt;/h2>
+		&lt;/section>
+	</code></pre>
+</section>
+<section data-transition="fade">
+	<!-- <h2>Example</h2> -->
+	<pre><code data-trim data-noescape>
+		&lt;section <mark>aria-labelledby="ch1"</mark>>
+		&lt;h2 <mark>id="ch1</mark>>Chapter 1: Loomings&lt;/h2>
+		&lt;/section>
+	</code></pre>
+</section>
+<section data-transition="fade-in slide-out">
+	<!-- <h2>Example</h2> -->
+	<pre><code data-trim data-noescape>
+		&lt;div <mark>role="doc-chapter region"</mark> aria-labelledby="ch1">
+		&lt;h2 id="ch1">Chapter 1: Loomings&lt;/h2>
+		&lt;/div>
+	</code></pre>
+</section>
+
+<section>
+	<h2>Testing: it’s a process</h2>
+</section>
+
+<section data-background-image="assets/intergration-test-drawers.jpg">
+	<h3><span class="readable">Several levels of testing</span></h3>
+</section>
+
+<section>
+	<h3>Various testing methods</h3>
+	<ul>
+		<li class="fragment">automated tests</li>
+		<li class="fragment">manual inspection</li>
+		<li class="fragment">user testing</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Manual inspection is crucial!</h3>
+</section>
+
+<section>
+	<h3>Automation is <b>NOT</b> sufficient!</h3>
+	<img src="assets/batman-meme.jpg" alt="" style="max-height: 50vh">
+</section>
+
+
+<section>
+	<h3>(Try to) involve users!</h3>
+	<!-- A chaque fois que les personnes valides se mettent temporairement dans un fauteuil roulant pour jouer la comédie ou "se sensibiliser" au handicap, elles oublient une chose FONDAMENTALE...
+Être handicapée c'est aussi et avant tout se construire ou se reconstruire, et évoluer dans une société pensée, contrôlée, dominée par les personnes valides -->
+<!-- analogy with feminism -->
+<!-- Assumptions will always be blurred by cultural, social, sometimes physical bias -->
+</section>
+
+<section>
+	<h3>Identify platform combinations</h3>
+	<ul class="fragment">
+		<li>epubjs + Firefox + NVDA on Windows</li>
+		<li>iBooks/Safari + VoiceOver on MacOS</li>
+		<li>Chrome + TalkBack on Android</li
+	</ul>
+</section>
+
+<section>
+	<h3>Test as early as possible!</h3>
+	<p class="fragment">Never, ever, understimate the cost of remediation ¯\_(ツ)_/¯</p>
+</section>
+
+
+<section>
+	<h3>Learn, share, Educate</h3>
+	<blockquote>
+		<p>If you can’t secure leadership backing right away, you can still form a grassroots accessibility movement within the company.</p>
+		&mdash; <a href="https://alistapart.com/article/diy-web-accessibility-blueprint">A DIY Web Accessibility Blueprint</a>
+	</blockquote>
+</section>
+
+<section>
+	<h2>Tooling</h2>
+</section>
+
+
+<section>
+	<h3>Accessibility checkers</h3>
+	<ul>
+		<li>aXe</li>
+		<li>Tenon</li>
+		<li>HTML Code Sniffer</li>
+		<li>A11y.css</li>
+		<li>Google Lighthouse</li>
+	</ul>
+	<p><a href="https://www.w3.org/WAI/ER/tools/">https://www.w3.org/WAI/ER/tools/</a></p>
+</section>
+
+<section>
+	<h2>Demo time!</h2>
+	<aside class="notes">
+		<ul>
+			<li>Chrome Contrast Checker</li>
+			<li>aXe browser extension</li>
+			<li>a11y.css</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
+	<h2>EPUB testing tools</h2>
+	<ul>
+		<li class="fragment">All of the aforementioned tools!</li>
+		<li class="fragment">Ace, by DAISY</li>
+		<li class="fragment">IBM Digital Content Checker</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Ace, by DAISY</h2>
+	<img src="assets/ace-logo.svg" alt="Ace’s logo: a light blue, thick A shape, overlapped with a green tick." style="border: none; background: none;">
+	<aside class="notes">
+		<b>TIMING TIP: 30/35 minutes</b>
+	</aside>
+</section>
+
+<section>
+	<h3>Ace’s goals</h3>
+	<ul>
+		<li class="fragment">manual inspection preparation</li>
+		<li class="fragment">automated checks</li>
+	</ul>
+	<p class="fragment">based on <a href="http://www.idpf.org/epub/a11y/accessibility.html">EPUB Accessibility 1.0</a></p>
+</section>
+
+<section>
+	<h3>Installation</h3>
+	<pre><code>
+		$ npm install @daisy/ace
+		</code></pre>
+</section>
+
+<section>
+	<figure>
+		<img src="assets/nodejs.png" style="max-height: 70vh" alt="Screenshot of NodeJS download page"/>
+		<figcaption><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></figcaption>
+	</figure>
+</section>
+<section>
+	<figure>
+		<img src="assets/homebrew.png" style="max-height: 70vh" alt="Screenshot of HomeBrew’s home page"/>
+		<figcaption><a href="https://brew.sh/">https://brew.sh/</a></figcaption>
+	</figure>
+</section>
+<section>
+	<figure>
+		<img src="assets/yarn.png" style="max-height: 70vh" alt="Screenshot of Yarn’s home page"/>
+		<figcaption><a href="https://yarnpkg.com/">https://yarnpkg.com/</a></figcaption>
+	</figure>
+</section>
+
+<section>
+	<h2>Demo time!</h2>
+	<aside class="notes">
+		<ul>
+			<li>command line basics</li>
+			<li>automated violation</li>
+			<li>outlines</li>
+			<li>image list</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
+	<h3>Mmm… but I hate the command line!</h3>
+	<ul>
+		<li>Ask for help! Don’t be shy! <a href="mailto:ace@daisy.org">ace@daisy.org</a></li>
+		<li><a href="http://bacc.dzb.de/">baCC</a>: by the German Central Library for the Blind (DZB)</li><!-- TODO add link -->
+		<li>Ace Desktop App comming later this year… stay tuned!</li>
+	</ul>
+</section>
+
+<section>
+	<h2>SMART</h2>
+	<p class="fragment"><span>S</span>implified <span>M</span>anual <span>A</span>ccessibility <span>R</span>eporting <span>T</span>ool</p>
+</section>
+
+<section>
+	<h2>Demo time!</h2>
+	<aside class="notes">
+		<ul>
+			<li>UI Overview</li>
+			<li>Import from Ace</li>
+			<li>Checklist</li>
+			<li>...</li>
+			<li>...</li>
+		</ul>
+	</aside>
+</section>
+
+<section>
+	<h3>Links</h3>
+	<ul>
+		<li><a href="https://inclusivepublishing.org/Ace">https://inclusivepublishing.org/Ace</a> (Ace overview)</li>
+		<li><a href="https://daisy.github.io/ace/">https://daisy.github.io/ace/</a> (Ace support site)</li>
+		<li><a href="http://kb.daisy.org/publishing/">http://kb.daisy.org/publishing/</a> (Knowledge Base)</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Should I use several tools?</h3>
+	<p>
+		<div class="fragment">Guess what?</div>
+		<div class="fragment">It depends! ¯\_(ツ)_/¯</div>
+	</p>
+</section>
+
+<section>
+	<h2>So, all in all…</h2>
+</section>
+
+<section data-background-video="assets/bluejays-fail-trip.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">Accessibility testing is sometimes complex, and sometimes you <b>will</b> trip up…</p>
+</section>
+<section data-background-video="assets/bluejays-fail-lookup.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">Do not aim too high, and always be aware of the technical context (a11y support)</p>
+</section>
+<section data-background-video="assets/bluejays-headstand.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">You will need to learn some new methods, some new tools</p>
+</section>
+<section data-background-video="assets/bluejays-jump.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">And these will help avoiding the pitfalls</p>
+</section>
+<section data-background-video="assets/bluejays-highfive.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">Remember to build a team, get help</p>
+</section>
+<section data-background-video="assets/bluejays-wow.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">You’ll get there! Be proud to do a quality job, get some wow!</p>
+</section>
+<section data-background-video="assets/bluejays-celebration.mp4" data-background-size="contain" data-background-video-loop="true">
+	<p class="offscreen">And –most importantly–, you’ll make more readers happy!</p>
+</section>
+
+<section>
+	<h2>Thanks!</h2>
+	<ul style="list-style-type: none">
+		<li><a href="https://twitter.com/rdeltour">@rdeltour</a></li>
+		<li><a href="https://twitter.com/rdeltour">@inclusivepub</a></li>
+		<li><a href="mailto:ace@daisy.org">ace@daisy.org</a></li>
+	</ul>
+</section>
+
 			</div>
 		</div>
 
@@ -37,9 +448,10 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
+				width: 1280,
+				height: 720,
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]

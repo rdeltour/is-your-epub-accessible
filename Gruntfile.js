@@ -106,6 +106,7 @@ module.exports = function(grunt) {
 			bundle: {
 				src: [
 					'index.html',
+					'assets/**',
 					'css/**',
 					'js/**',
 					'lib/**',
@@ -132,7 +133,10 @@ module.exports = function(grunt) {
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
+				files: [
+					'css/reveal.scss',
+					'css/custom.css'
+			 	],
 				tasks: 'css-core'
 			},
 			html: {
@@ -140,6 +144,9 @@ module.exports = function(grunt) {
 			},
 			markdown: {
 				files: root.map(path => path + '/*.md')
+			},
+			assets: {
+				files: 'assets/**'
 			},
 			options: {
 				livereload: true
