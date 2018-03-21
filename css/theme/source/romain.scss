@@ -13,12 +13,7 @@
 
 // Include theme-specific fonts
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-@import url('https://fonts.googleapis.com/css?family=Carter+One');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Peralta');
 @import url('https://fonts.googleapis.com/css?family=Handlee');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-@import url('https://fonts.googleapis.com/css?family=Lato');
 
 
 // Override theme settings (see ../template/settings.scss)
@@ -56,6 +51,9 @@ section.has-light-background {
 @import "../template/theme";
 // ---------------------------------------------
 
+.reveal .pause-overlay {
+	background: center / contain no-repeat url(../../assets/whale-signal.jpg) #1a1a1a;
+}
 .reveal .display {
 	font-family: $headingFont;
 }
