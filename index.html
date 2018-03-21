@@ -32,25 +32,37 @@
 	<div>Romain Deltour (<a href="https://twitter.com/rdeltour">@rdeltour</a>), DAISY Consortium</div>
 	<div><a href="http://techforum.booknetcanada.ca/sessions/is-your-epub-accessible-put-it-to-the-test/">#ebookcraft</a> – March 21, 2018</div>
 	<aside class="notes">
-		Hi
+		<p>Hi, I’m Romain Deltour. Working for the DAISY Consortium</p>
+		<p>I'm gonna talk about accessibility testing, for EPUB</p>
+		<p>Thanks ebookcraft</p>
+		<p>Questions welcome at anytime</p>
 	</aside>
 </section>
 
 <section>
 	<h2>#a11y <span class="fragment fade-in">testing</span></h2>
+	<aside class="notes">
+		<p>a11y = accessbility (numeronym)</p>
+	</aside>
 </section>
 
 <section data-state="slide-twitter">
-	<h2>Because it’s right</h2>
+	<h2>Because it’s the right thing</h2>
 	<blockquote class="quote-tweet"><p>I would also say that not paying close attention to #a11y ignores the democratic promise of digital publishing. #eprdctn</p>&mdash; Laura Brady (@LauraB7) <a href="https://twitter.com/LauraB7/status/725348670196047873">April 27, 2016</a></blockquote>
 </section>
 
 <section data-background-video="assets/police.mp4">
 	<h2 class="readable" style="margin-top:4em">Because you don’t have a choice</h2>
+	<aside class="notes">
+		<p>Accessibility can be required by law (e.g. ADA,EU Directive on Digital Accessibility)</p>
+	</aside>
 </section>
 
 <section>
 	<h2>Because… <br>it’s your (frickin’ damn) job!</h2>
+	<aside class="notes">
+		<p>If you’re serious about creating quality content, then it includes creating accessbile content.</p>
+	</aside>
 </section>
 
 <section data-state="slide-twitter">
@@ -62,21 +74,30 @@
 	<h2 style="margin-bottom: 0">Accessibility impacts everyone</h2>
 	<img src="assets/ms-inclusive-toolkit.png" alt="line icons representing various persons with permanent, temporary or situational disability" style="max-width: 80%">
 	<small>Credits: <a href="https://www.microsoft.com/en-us/design/inclusive">Microsoft’s Inclusive Design Manual</a></small>
+	<aside class="notes">
+		<p>Disability can be permanent, but also temporary or situational.</p>
+	</aside>
 </section>
 
 <section>
 	<h2>Accessibility is a continuum</h2>
+	<aside class="notes">
+		<p>You’ll often hear that accessibility is a continuum. It means that it’s not just about "pass" or "fail". Baby steps, low-hanging fruits can already help a lot.</p>
+	</aside>
 </section>
 
 <section data-background-image="assets/mind-blown.gif" >
 	<h2 ><span class="readable">Accessibility is a multiverse!</span></h2>
-	<!-- TODO magic firework gif -->
+	<aside class="notes">
+		<p>Accessibility can mean different things for different users. A product can be accessible to some specific group of users, but not to others. It’s a multiverse!</p>
+	</aside>
 </section>
 
 <section data-background-image="assets/inaccessible-ramp.jpg" >
 	<h2><span class="readable">Accessibility is about the whole thing</span></h2>
-	<!--  -->
-	<!-- <img src="assets/inaccessible-ramp.jpg" alt="" style="height: 60%"> -->
+	<aside class="notes">
+		If a single one component in the system in the inaccessible, it can hinder the accessibility for the entire product.
+	</aside>
 </section>
 
 <section data-background-image="assets/robson-square.jpg">
@@ -85,7 +106,11 @@
 		<small class="readable">See <a href="https://incl.ca/the-problems-with-ramps-blended-into-stairs/">“The Problems With Ramps Blended Into Stairs”</a> by Nicolas Steenhout</small>
 		<small class="readable">Photo credit: Robson Square, by <a href="https://www.flickr.com/photos/deanbouchard/6160057185/in/photostream/">Dean Bouchard</a></small>
 	</div>
-	<!-- complexity, subtle, difficult to test everything -->
+	<aside class="notes">
+		<p>Picture of a ramp blended into stairs, in Robson Park in Vancouver.</p>
+		<p>Often cited as a good example of universal design.</p>
+		<p>But some people say it has many issues: lack of rails, poor visibility at night, etc.</p>
+	</aside>
 </section>
 
 <section>
@@ -111,12 +136,12 @@
 
 <section>
 	<!-- <h2>The accessibility tree</h2> -->
-	<img src="assets/DOM-a11y-tree.png" width="80%" alt="">
+	<img src="assets/DOM-a11y-tree.png" width="80%" alt="A diagram showing how an HTML document produces a DOM, which is both rendered on screen and also produces the a11y tree, used by AT to expose the info to the user.">
 	<small>Credits: <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model explainer</a></small>
 </section>
 
 <section>
-	<img src="assets/a11y-tree-example.png" width="80%" alt="">
+	<img src="assets/a11y-tree-example.png" width="80%" alt="An HTML img element is painted into visual UI, but also conveyed in the a11y tree as a node with the image role">
 	<small>Credits: <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model explainer</a></small>
 </section>
 	
@@ -128,12 +153,19 @@
 		<li>Voice Over</li>
 		<li>ZoomText</li>
 	</ul>
-	<!-- TODO check out other AT examples -->
+	<aide class="notes">
+		There are various AT, this list is just a limited example. AT also include input devices (e.g. keyboard, switches).
+	</aide>
 </section>
 
 <section>
 	<h2>Accessibility support</h2>
-	<!-- TODO insert definition from WCAG -->
+	<blockquote class="fragment"><p>Using a technology in a way that is accessibility supported means that it works with assistive technologies (AT) and the accessibility features of operating systems, browsers, and other user agents.</p>– <a href="https://www.w3.org/TR/WCAG20/#accessibility-supporteddef">WCAG 2.0</a> specification</blockquote>
+	<aside class="notes">
+		<p><b>TIMING TIP: 15 mins</b></p>
+		<p>One of the most critical concept to grok.</p>
+		<p>A technical solution is only accessible when it’s accessibility supported.</p>
+	</aside>
 </section>
 
 <section>
@@ -210,6 +242,9 @@
 
 <section>
 	<h2>Testing: it’s a process</h2>
+	<aside class="notes">
+		<p><b>TIMING TIP: 25 mins</b></p>
+	</aside>
 </section>
 
 <section data-background-image="assets/intergration-test-drawers.jpg">
@@ -237,10 +272,11 @@
 
 <section>
 	<h3>(Try to) involve users!</h3>
-	<!-- A chaque fois que les personnes valides se mettent temporairement dans un fauteuil roulant pour jouer la comédie ou "se sensibiliser" au handicap, elles oublient une chose FONDAMENTALE...
-Être handicapée c'est aussi et avant tout se construire ou se reconstruire, et évoluer dans une société pensée, contrôlée, dominée par les personnes valides -->
-<!-- analogy with feminism -->
-<!-- Assumptions will always be blurred by cultural, social, sometimes physical bias -->
+	<aside class="notes">
+		<p>There’s only so much a developer or accessbility expert will detect.</p>
+		<p>Assumptions will always be blurred by cultural, social, sometimes physical bias</p>
+		<p>Hands-on testing with actual disabled people is invaluable</p>
+	</aside>
 </section>
 
 <section>
@@ -248,13 +284,17 @@
 	<ul class="fragment">
 		<li>epubjs + Firefox + NVDA on Windows</li>
 		<li>iBooks/Safari + VoiceOver on MacOS</li>
-		<li>Chrome + TalkBack on Android</li
+		<li>Chrome + TalkBack on Android</li>
 	</ul>
 </section>
 
 <section>
 	<h3>Test as early as possible!</h3>
 	<p class="fragment">Never, ever, understimate the cost of remediation ¯\_(ツ)_/¯</p>
+	<aside class="notes">
+		<p>automation can help too</p>
+		<p>For advanced workflows, consider Continuous Integration</p>
+	</aside>
 </section>
 
 
@@ -268,6 +308,9 @@
 
 <section>
 	<h2>Tooling</h2>
+	<aside class="notes">
+		<p><b>TIMING TIP: 30 minutes</b></p>
+	</aside>
 </section>
 
 
@@ -307,7 +350,7 @@
 	<h2>Ace, by DAISY</h2>
 	<img src="assets/ace-logo.svg" alt="Ace’s logo: a light blue, thick A shape, overlapped with a green tick." style="border: none; background: none;">
 	<aside class="notes">
-		<b>TIMING TIP: 30/35 minutes</b>
+		<p><b>TIMING TIP: 35 minutes</b></p>
 	</aside>
 </section>
 
@@ -341,9 +384,12 @@
 </section>
 <section>
 	<figure>
-		<img src="assets/yarn.png" style="max-height: 70vh" alt="Screenshot of Yarn’s home page"/>
+		<img src="assets/yarn.png" style="max-height: 50vh" alt="Screenshot of Yarn’s home page"/>
 		<figcaption><a href="https://yarnpkg.com/">https://yarnpkg.com/</a></figcaption>
 	</figure>
+	<pre><code>
+		$ yarn global add @daisy/ace
+	</code></pre>
 </section>
 
 <section>
